@@ -13,6 +13,7 @@ def submit_ts():
     ts_data['hooks'] = hooks_value.get()
     ts_data['matt'] = matt_value.get()
     ts_data['insurance'] = insurance_value.get()
+    ts_data['walls'] = walls_value.get()
     Label(window, text='Готово. Можете закрыть окно или переделать.').place(relx=0.3, y=230)
     Label(window, text='В текущей директории созданы нужные файлы').place(relx=0.3, y=250)
 
@@ -51,7 +52,7 @@ korob_rad1 = Radiobutton(window, text='V1', value='V1', variable=korob_value).gr
 korob_rad2 = Radiobutton(window, text='V2', value='V2', variable=korob_value).grid(column=2, row=4)
 korob_rad3 = Radiobutton(window, text='V2 без проектора', value='V2-', variable=korob_value).grid(column=3, row=4)
 
-hooks_value = IntVar()
+hooks_value = StringVar()
 hooks_lbl = Label(window, text='Зацепов').grid(column=0, row=5)
 hooks_txt = Entry(window, width=3, textvariable=hooks_value).grid(column=1, row=5)
 
@@ -68,7 +69,7 @@ insurance_txt = Entry(window, width=3, textvariable=insurance_value).grid(column
 
 walls_value = IntVar()
 walls_lbl = Label(window, text='Боковые стенки').grid(column=0, row=8)
-walls_lbl1 = Label(window, text='м').grid(column=2, row=8)
+walls_lbl1 = Label(window, text='мм').grid(column=2, row=8)
 walls_txt = Entry(window, width=3, textvariable=walls_value).grid(column=1, row=8)
 
 footer_note_lbl1 = Label(window, text='(если отсутствует - введите 0)').grid(column=3, row=7)
