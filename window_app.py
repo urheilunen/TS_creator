@@ -15,7 +15,7 @@ def submit_ts():
     ts_data['insurance'] = insurance_value.get()
     ts_data['walls'] = walls_value.get()
     Label(window, text='Готово. Можете закрыть окно или переделать.').place(relx=0.3, y=230)
-    Label(window, text='В текущей директории созданы нужные файлы').place(relx=0.3, y=250)
+    Label(window, text='После закрытия окна я начну делать файлы').place(relx=0.3, y=250)
 
 
 window = Tk()
